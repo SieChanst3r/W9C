@@ -3,6 +3,20 @@ console.log(userTweets);
 
 
 
+function minimum(user) {
+    if (user.userAge >= 18) {
+        return true;
+
+    } else if (user.userAge < 18) {
+        return false;
+    } else {
+        console.log("Something went wrong");
+    }
+}
+
+
+
+
 var users = [{
         username: "Alex",
         userAge: 19,
@@ -86,6 +100,9 @@ var users = [{
     },
 
 ]
-for (var counter = 0; counter < users.length; counter++) {
-    console.log(users[counter]);
-}
+var user = users[3]
+var isOfAge = minimum(user)
+console.log(isOfAge)
+
+var Adult = users.filter(minimum);
+console.log(Adult)
